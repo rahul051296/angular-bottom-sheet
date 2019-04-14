@@ -1,6 +1,16 @@
 {
   "name": "angular-bottom-sheet",
   "version": "1.1.0",
+  "description": "Angular Bottom Sheet Component",
+  "keywords": [
+    "angular bottom sheet",
+    "angular 7 bottom sheet",
+    "angular material bottom sheet",
+    "material 2.0 bottom sheet",
+    "material design 2.0 bottom sheet"
+  ],
+  "author": "Rahul Prabhakar",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,6 +20,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
@@ -45,5 +56,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahul051296/angular-bottom-sheet"
   }
 }
