@@ -4,6 +4,8 @@ Angular Bottom Sheet [Demo](http://rahulprabhakar.in/angular-bottom-sheet/)
 
 Requires Angular 7.x
 
+## Screenshot 
+
 ![Screenshot1](screenshot/Screenshot-1.png)
 
 ## Install
