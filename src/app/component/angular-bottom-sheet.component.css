@@ -3,7 +3,7 @@
 
 
 .add-widget-popover {
-  background: rgba(16, 54, 90, 0.99);
+  background: #fff;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -12,9 +12,9 @@
   margin-left: -35%;
   width: 75%;
   z-index: 4;
-  color: #fff;
+  color: #363636;
   box-shadow: 0px 1px 13px 1px rgba(0, 0, 0, 0.31);
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 .widget-popover-header h3.title {
@@ -23,7 +23,7 @@
 }
 
 .close {
-  color: #fff;
+  color: #363636;
   opacity: 1;
   background: none;
   outline: none;
@@ -34,13 +34,13 @@
 }
 
 .close:hover {
-  color: #f1f1f1;
   cursor: pointer;
 }
 
 .widget-card-container {
   height: 300px;
   overflow-y: auto;
+  float: right;
 }
 
 .p-t-15 {

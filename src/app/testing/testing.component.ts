@@ -14,7 +14,7 @@ export class TestingComponent implements OnInit {
 
   ngOnInit() {
     this.options = {
-      title: "English Card"
+      title: "Angular Bottom Card"
     }
   }
 
