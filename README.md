@@ -32,6 +32,16 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 
 ```
+Add the following component tag in you template.
+
+```html
+<button (click)="openBottomSheet()"></button><!-- Toggle bottom sheet -->
+
+<angular-bottom-sheet [options]="options" #bottomSheet>
+    <!-- Your content goes here -->
+</angular-bottom-sheet>
+```
+
 
 Declare the options in your component where you want to consume the bottom sheet component.
 
@@ -64,15 +74,7 @@ export class AppComponent {
 
 ```
 
-Add the following component tag in you template.
 
-```html
-<button (click)="openBottomSheet()"></button><!-- Toggle bottom sheet -->
-
-<angular-bottom-sheet [options]="options" #bottomSheet>
-    <!-- Your content goes here -->
-</angular-bottom-sheet>
-```
 
 ### Settings
 The following list of settings are supported by the component. Configure the options to meet your requirement.
