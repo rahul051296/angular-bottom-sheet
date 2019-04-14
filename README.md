@@ -1,27 +1,96 @@
-# AngularBottomSheet
+# Angular Bottom Sheet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+Angular Bottom Sheet [Demo](http://rahulprabhakar.in/angular-bottom-sheet/)
 
-## Development server
+Requires Angular 7.x
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Install
 
-## Code scaffolding
+``npm i angular-bottom-sheet``
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+First, import AngularBottomSheetModule to your module
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AngularBottomSheetModule } from 'angular-bottom-sheet';
+import { AppComponent } from './app.component';
 
-## Running unit tests
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AngularBottomSheetModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
 
-## Running end-to-end tests
+Declare the options in your component where you want to consume the bottom sheet component.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```javascript
+import { Component, ViewChild } from '@angular/core';
+import { AngularBottomSheetComponent, AngularBottomSheetConfig } from 'angular-bottom-sheet';
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  @ViewChild('bottomSheet') bottomSheet: AngularBottomSheetComponent;
+  options: AngularBottomSheetConfig;
+
+  openBottomSheet() {
+    this.bottomSheet.open();
+  }
+
+  ngOnInit(){
+    this.options = {
+      title:"Angular Bottom Sheet",
+      backgroundColor: "#ffffff", 
+      fontColor: "#363636" 
+    }
+  }
+}
+
+```
+
+Add the following component tag in you template.
+
+```html
+<button (click)="openBottomSheet()"></button><!-- Toggle bottom sheet -->
+
+<angular-bottom-sheet [options]="options" #bottomSheet>
+    <!-- Your content goes here -->
+</angular-bottom-sheet>
+```
+
+### Settings
+The following list of settings are supported by the component. Configure the options to meet your requirement.
+
+| Setting         |Type    | Description            | Default Value |
+|:--- |:--- |:--- |:--- |
+| title | String | To set the title for the bottom sheet component. | "" |
+| backgroundColor | String | To set the background color of the bottom sheet component. | "#fff" |
+| fontColor | String | To set the font color of the bottom sheet component. | "#363636" |
+
+### Events
+- `open()` - opens the bottom sheet component.
+    
+    Example : `this.bottomSheet.open()`"
+- `close()` - closes the bottom sheet component.
+    
+    Example : `this.bottomSheet.close()`"
+- `toggle()` - toggles the bottom sheet component between open and close states.
+    
+    Example : `this.bottomSheet.toggle()`"
+
