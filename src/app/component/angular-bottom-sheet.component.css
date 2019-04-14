@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+
+.add-widget-popover {
+  background: rgba(16, 54, 90, 0.99);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-radius: 16px 16px 0px 0;
+  left: 50%;
+  margin-left: -35%;
+  width: 75%;
+  z-index: 4;
+  color: #fff;
+  box-shadow: 0px 1px 13px 1px rgba(0, 0, 0, 0.31);
+  font-family: 'Rubik', sans-serif;
+}
+
+.widget-popover-header h3.title {
+  display: inline-block;
+  font-weight: 500;
+}
+
+.close {
+  color: #fff;
+  opacity: 1;
+  background: none;
+  outline: none;
+  font-size: 24px;
+  border: none;
+  padding-top: 10px;
+  float: right;
+}
+
+.close:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.widget-card-container {
+  height: 300px;
+  overflow-y: auto;
+}
+
+.p-t-15 {
+  padding-top: 15px;
+}
+
+.p-l-15 {
+  padding-left: 15px;
+}
+
+.p-r-15 {
+  padding-right: 15px;
+}
+
+.p-all-16 {
+  padding: 16px
+}
+
+.m-t-0 {
+  margin-top: 0px;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bdbdbd;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(92, 92, 92);
+}
