@@ -16,8 +16,9 @@ export class TestingComponent implements OnInit {
     this.options = {
       title: "Angular Bottom Sheet",
       enableCloseButton: true,
-      darkTheme: true
+      darkTheme: false
     }
+    this.open();
   }
 
   toggle() {
