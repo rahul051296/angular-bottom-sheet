@@ -14,7 +14,9 @@ export class TestingComponent implements OnInit {
 
   ngOnInit() {
     this.options = {
-      title: "Angular Bottom Card"
+      title: "Angular Bottom Sheet",
+      enableCloseButton: true,
+      darkTheme:true
     }
   }
 

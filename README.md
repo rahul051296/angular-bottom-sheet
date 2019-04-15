@@ -4,9 +4,6 @@ Angular Bottom Sheet [Demo](http://rahulprabhakar.in/angular-bottom-sheet/)
 
 Requires Angular 7.x
 
-## Screenshot 
-
-![Screenshot1](screenshot/Screenshot-1.png)
 
 ## Install
 
@@ -77,7 +74,10 @@ export class AppComponent {
 }
 
 ```
+## Screenshot 
 
+![Screenshot1](screenshot/Screenshot-1.png)
+![Screenshot2](screenshot/Screenshot-2.png)
 
 
 ### Settings
@@ -88,6 +88,9 @@ The following list of settings are supported by the component. Configure the opt
 | title | String | To set the title for the bottom sheet component. | "" |
 | backgroundColor | String | To set the background color of the bottom sheet component. | "#fff" |
 | fontColor | String | To set the font color of the bottom sheet component. | "#363636" |
+| enableCloseButton | Boolean | To enable the close button in bottom sheet component. | false |
+| closeButtonTitle | String | To set the value for close button in bottom sheet component. | "Close" |
+| darkTheme | Boolean | To enable the dark theme in the bottom sheet component. | false |
 
 ### Events
 - `open()` - opens the bottom sheet component.

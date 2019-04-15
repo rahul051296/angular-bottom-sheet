@@ -16,19 +16,24 @@ import { AngularBottomSheetConfig } from '../utility/angular-bottom-sheet.interf
 export class AngularBottomSheetComponent {
 
     flags: any = {
-        isWidgetSelectedEnabled: false
+        isBottomSheetEnabled: false
     };
 
     @Input() options: AngularBottomSheetConfig;
-    
+
     constructor(private changeDetector: ChangeDetectorRef) {
+    }
+
+    ngOnInit() {
+        this.flags.isCloseButtonEnabled = this.options.enableCloseButton ? true : false;
+        this.options.closeButtonTitle = this.options.closeButtonTitle? this.options.closeButtonTitle: "Close"
     }
 
     /**
      * Opens bottom sheet component
      */
     open() {
-        this.flags.isWidgetSelectedEnabled = true;
+        this.flags.isBottomSheetEnabled = true;
         this.changeDetector.detectChanges();
     }
 
@@ -36,7 +41,7 @@ export class AngularBottomSheetComponent {
      * Closes bottom sheet component
      */
     close() {
-        this.flags.isWidgetSelectedEnabled = false;
+        this.flags.isBottomSheetEnabled = false;
         this.changeDetector.detectChanges();
     }
 
@@ -44,7 +49,7 @@ export class AngularBottomSheetComponent {
      * Toggles bottom sheet component
      */
     toggle() {
-        this.flags.isWidgetSelectedEnabled = !this.flags.isWidgetSelectedEnabled;
+        this.flags.isBottomSheetEnabled = !this.flags.isBottomSheetEnabled;
         this.changeDetector.detectChanges();
     }
 }
