@@ -7,5 +7,5 @@
         "entryFile": "public_api.ts"
       }
     },
-    "whitelistedNonPeerDependencies": ["angular", "core-js", "rxjs", "zone.js", "ng-packagr", "font-awesome"]
+    "whitelistedNonPeerDependencies": ["angular", "core-js", "rxjs", "zone.js", "ng-packagr", "font-awesome", "bootstrap"]
   }

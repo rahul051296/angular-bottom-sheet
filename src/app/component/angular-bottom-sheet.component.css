@@ -12,14 +12,14 @@
   width: 100%;
   position: fixed;
   bottom: 0;
-  border-radius: 16px 16px 0px 0;
+  border-radius: 8px 8px 0px 0;
   left: 50%;
   margin-left: -35%;
   width: 75%;
   z-index: 4;
   color: #363636;
   box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12);
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: 'Roboto',sans-serif;
 }
 
 .bg-dark{
@@ -31,7 +31,7 @@
   display: inline-block;
   font-weight: 500;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .bottom-sheet-header {
@@ -56,7 +56,7 @@
 }
 
 .bottom-sheet-content {
-  height: 300px;
+  max-height: 300px;
   overflow-y: auto;
   padding: 16px;
 }
