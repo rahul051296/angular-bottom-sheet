@@ -27,10 +27,11 @@
   background: #363636;
 }
 
-.bottom-sheet-header h3.title {
+.bottom-sheet-header h4.title {
   display: inline-block;
   font-weight: 500;
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .bottom-sheet-header {

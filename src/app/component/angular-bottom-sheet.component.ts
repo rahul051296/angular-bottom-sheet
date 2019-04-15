@@ -18,7 +18,6 @@ export class AngularBottomSheetComponent {
     flags: any = {
         isBottomSheetEnabled: false
     };
-
     @Input() options: AngularBottomSheetConfig;
 
     constructor(private changeDetector: ChangeDetectorRef) {
@@ -26,7 +25,7 @@ export class AngularBottomSheetComponent {
 
     ngOnInit() {
         this.flags.isCloseButtonEnabled = this.options.enableCloseButton ? true : false;
-        this.options.closeButtonTitle = this.options.closeButtonTitle? this.options.closeButtonTitle: "Close"
+        this.options.closeButtonTitle = this.options.closeButtonTitle ? this.options.closeButtonTitle : "Close"
     }
 
     /**
@@ -50,6 +49,22 @@ export class AngularBottomSheetComponent {
      */
     toggle() {
         this.flags.isBottomSheetEnabled = !this.flags.isBottomSheetEnabled;
+        this.changeDetector.detectChanges();
+    }
+
+    /**
+     * Toggles close button
+     */
+    toggleCloseButton() {
+        this.flags.isCloseButtonEnabled = !this.flags.isCloseButtonEnabled;
+        this.changeDetector.detectChanges();
+    }
+
+    /**
+     * Toggles dark theme
+     */
+    toggleDarkTheme() {
+        this.options.darkTheme = !this.options.darkTheme;
         this.changeDetector.detectChanges();
     }
 }

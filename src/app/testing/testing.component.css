@@ -1,0 +1,12 @@
+.button-container {
+  z-index: 9999;
+  position: absolute;
+  background: #fff;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+.button-container button {
+  margin: 8px;
+}
