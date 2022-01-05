@@ -138,5 +138,8 @@
       }
     }
   },
-  "defaultProject": "angular-bottom-sheet"
+  "defaultProject": "angular-bottom-sheet",
+  "cli": {
+    "analytics": false
+  }
 }
