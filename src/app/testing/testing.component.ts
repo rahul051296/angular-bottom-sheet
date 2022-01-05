@@ -9,7 +9,7 @@ import { AngularBottomSheetComponent } from '../component/angular-bottom-sheet.c
 })
 export class TestingComponent implements OnInit {
   options: AngularBottomSheetConfig;
-  @ViewChild('test') testing: AngularBottomSheetComponent;
+  @ViewChild('test', { static: true }) testing: AngularBottomSheetComponent;
   constructor() { }
 
   ngOnInit() {
